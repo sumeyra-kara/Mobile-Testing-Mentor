@@ -3,7 +3,8 @@ package utils;
 public enum App {
     API_Demos(
             "com.touchboarder.android.api.demos",
-            "com.touchboarder.androidapidemos.MainActivity"
+            "com.touchboarder.androidapidemos.MainActivity",
+            ""
     ),
     CALCULATOR(
             "com.google.android.calculator",
@@ -19,4 +20,11 @@ public enum App {
         this.appActivity=appActivity;
     }
 
+    public  String appZipFile;
+
+    App(String appPackage, String appActivity, String appZipFile) {
+        this.appPackage = appPackage;
+        this.appActivity = appActivity;
+        this.appZipFile = appZipFile;
+    }
 }

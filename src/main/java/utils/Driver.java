@@ -37,12 +37,16 @@ public class Driver {
 
     public static DesiredCapabilities setCapabilities (Device device, App app){
         DesiredCapabilities capabilities  = new DesiredCapabilities();
+        String apk = "src/main/resources/"+app.appZipFile;
 
         // Device capabilities
         capabilities.setCapability(MobileCapabilityType.UDID,device.udid);
         capabilities.setCapability(MobileCapabilityType.DEVICE_NAME,device.deviceName);
         capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, device.platformName);
         capabilities.setCapability(MobileCapabilityType.VERSION,device.version);
+        if (app.appZipFile.length()!=0){
+            capabilities.setCapability("appium:apk",apk);
+        }
 
         // application capabilities
         capabilities.setCapability("appPackage",app.appPackage); // hangi application uzerinde calismak istiyorsan onun kimligi
