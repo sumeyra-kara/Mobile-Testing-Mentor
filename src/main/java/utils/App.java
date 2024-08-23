@@ -8,7 +8,8 @@ public enum App {
     ),
     CALCULATOR(
             "com.google.android.calculator",
-            "com.android.calculator2.Calculator"
+            "com.android.calculator2.Calculator",
+            ""
     )
     ;
 

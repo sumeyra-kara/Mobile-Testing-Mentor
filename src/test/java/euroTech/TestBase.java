@@ -16,7 +16,6 @@ import java.util.concurrent.TimeUnit;
 public class TestBase {
 
     AppiumDriver<MobileElement> driver;
-
     WebDriverWait wait;
 
     @BeforeTest
